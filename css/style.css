@@ -19,7 +19,17 @@ body {
   /* min-width: 1024px;
   min-height: 768px; */
   font-family: "Poppins", sans-serif;
+  
 }
+
+/* .wrapper{
+  padding: 10px;
+  box-sizing: border-box;
+  resize: horizontal;
+  overflow: auto;
+  max-width: 100%;
+  height: calc(100vh-16px);
+} */
 
 a {
   text-decoration: none;
@@ -172,8 +182,8 @@ header {
 }
 
 .main-container .third .reveal_btn {
-  width: 170px;
-  height: 50px;
+  width: 9.5rem;
+  height: 3rem;
   border-radius: 10px;
   background-color: var(--primary-color);
   color: var(--dark-yellow);
@@ -214,12 +224,12 @@ header {
 .main .reveal_info .circle {
   width: 250px;
   height: 250px;
-  line-height: 250px;
+  line-height: 240px;
   background-color: var(--primary-color);
   border-radius: 50%;
   border: 10px solid var(--dark-yellow);
   text-align: center;
-  font-size: 6rem;
+  font-size: 9rem;
   font-weight: 600;
   color: #fff;
 }
@@ -299,7 +309,7 @@ header {
   .main .reveal_info .circle {
     height: 200px;
     width: 200px;
-    line-height: 200px;
+    line-height: 180px;
     font-size: 5.5rem;
   }
 }
@@ -310,5 +320,36 @@ header {
     width: 150px;
     line-height: 140px;
     font-size: 5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .main{
+    padding-left: 5rem;
+  }
+  .title{
+    font-size: 1.3rem;
+
+  }
+  .main-container .first p {
+    width: 70%;
+    font-size: 0.7rem;
+  }
+  .main .reveal_info {
+    right: -1%;
+  }
+  .main .reveal_info .circle {
+    height: 100px;
+    width: 100px;
+    line-height: 79px;
+    font-size: 3rem;
+  }
+  .main .reveal_info p {
+    font-size: 0.7rem;
+    width: 50%;
+  }
+  .main-container .third .reveal_btn {
+    width: 7rem;
+    /* height: 2rem; */
   }
 }

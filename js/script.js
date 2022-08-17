@@ -36,10 +36,10 @@ function activateSlider(value) {
 
 //function for showing data when reveal button is clicked
 function showData() {
-  let sliderValue = slider.value;
+  slider.value = 2.2;
   revealInfo.forEach((ele) => {
     let targetData = ele.getAttribute("data-target");
-    if (targetData && sliderValue == targetData) {
+    if (targetData && slider.value == targetData) {
       ele.style.display = "flex";
       footerText.style.display = "block";
       revealBtn.style.display = "none";
@@ -47,11 +47,30 @@ function showData() {
       ele.style.display = "none";
     }
   });
+  const classes = [1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9, 11];
+  for (let i = 0; i <= classes.length; i++) {
+    if (classes[i] <= slider.value) {
+      activity.forEach((ele) => {
+        if (ele.classList.contains(classes[i])) {
+          ele.classList.add("selected_activity");
+        }
+      });
+    } else {
+      activity.forEach((ele) => {
+        if (ele.classList.contains(classes[i])) {
+          ele.classList.remove("selected_activity");
+        }
+      });
+    }
+  }
 }
 
 //function for showing reference in a modal box
 function showReference() {
+  let reference = document.querySelector(".reference");
   modal.classList.add("modal_active");
+  reference.classList.add("active");
+  console.log(reference.classList);
 }
 
 //function for closing the modal box
@@ -60,14 +79,3 @@ function closeReference() {
   modal.classList.remove("modal_active");
   reference.classList.remove("active");
 }
-
-//activating the sidebar icon on click
-sidebarItem.forEach((el) => {
-  el.addEventListener("click", function () {
-    var current = document.querySelector(".active");
-    if (current) {
-      current.classList.remove("active");
-    }
-    this.classList.add("active");
-  });
-});

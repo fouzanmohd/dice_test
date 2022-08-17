@@ -275,10 +275,11 @@ header {
 .modal .close_box {
   height: 50px;
   width: 50px;
-  border: 2px solid var(--primary-color);
+  border: 1.5px solid var(--primary-color);
   border-radius: 50%;
   text-align: center;
-  font-size: 2.3rem;
+  font-size: 2.4rem;
+  font-weight: 300;
   line-height: 50px;
   margin: 20px;
   color: var(--primary-color);
@@ -350,6 +351,5 @@ header {
   }
   .main-container .third .reveal_btn {
     width: 7rem;
-    /* height: 2rem; */
   }
 }

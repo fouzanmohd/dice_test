@@ -16,8 +16,8 @@
   box-sizing: border-box;
 }
 body {
-  /* min-width: 1024px;
-  min-height: 768px; */
+  min-width: 1024px;
+  min-height: 768px;
   font-family: "Poppins", sans-serif;
   
 }
@@ -321,6 +321,10 @@ header {
     width: 150px;
     line-height: 140px;
     font-size: 5rem;
+  }
+  .main .reveal_info p {
+    font-size: 0.8rem;
+    width: 60%;
   }
 }
 

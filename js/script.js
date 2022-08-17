@@ -7,6 +7,7 @@ const footerText = document.querySelector(".footer_text");
 const modal = document.querySelector(".modal");
 const sidebarItem = document.querySelectorAll(".sidebar_item");
 const leftInfo = document.querySelector(".left_info");
+const title = document.querySelector(".title");
 
 // function for enabling slider functionality
 function activateSlider(value) {
@@ -66,6 +67,7 @@ function showData() {
   }
 
   leftInfo.innerHTML = "The recommended number of activites:"
+  title.innerHTML = "2. Recommendations for daily activities."
 }
 
 //function for showing reference in a modal box

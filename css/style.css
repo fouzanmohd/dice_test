@@ -249,7 +249,7 @@ header {
 /* modal section starts here */
 .modal {
   position: fixed;
-  height: 85%;
+  height: 80%;
   width: 90%;
   background-color: #c1cdd3;
   left: 50%;

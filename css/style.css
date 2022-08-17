@@ -209,6 +209,7 @@ header {
   padding:0 8px;
   height: 500px;
   box-shadow: 12px 0px 12px -6px rgba(0,0,0,0.17);  
+  border-radius: 5px;
 }
 .main .sidebar img {
   height: 30px;

@@ -16,7 +16,8 @@
     <title>Dice Slider</title>
   </head>
   <body>
-    <!-- header section starts here -->
+    <div class="wrapper">
+      <!-- header section starts here -->
     <header class="header">
       <ul class="nav">
         <li class="nav-item"><a class="border" href="">UNMET NEED</a></li>
@@ -40,7 +41,7 @@
 
       <div class="main-container">
         <div class="container first">
-          <p>
+          <p class="left_info">
             Slide the arrow to select a number of activities you give your
             patients
           </p>
@@ -73,13 +74,19 @@
           </div>
         </div>
         <div class="container third">
+          <div class="reveal_info" data-target="2.2">
+            <div class="circle">6</div>
+            <p class="reveal_info_content">
+              Met quia conseque earit, opta et lab inihitatet magnima gnation.
+            </p>
+          </div>
           <button class="reveal_btn" onclick="showData()">
             Press to reveal
           </button>
         </div>
       </div>
       <div class="container sidebar">
-        <a class="home sidebar_item" href="#"
+        <a class="home sidebar_item" href="/"
           ><img class="sidebar_item" src="./images/Home-icon.png" alt=""
         /></a>
         <a class="reference sidebar_item" onclick="showReference(this)"
@@ -92,33 +99,31 @@
         /></a>
       </div>
 
-      <div class="reveal_info" data-target="2.2">
-        <div class="circle">6</div>
-        <p class="reveal_info_content">
-          Met quia conseque earit, opta et lab inihitatet magnima gnation.
-        </p>
-      </div>
-    </div>
-    <!-- Main section Ends here -->
-
-    <!-- Modal box section starts here -->
+       <!-- Modal box section starts here -->
     <div class="modal">
-      <div class="modal_content">
-        <h1>References</h1>
-        <ul>
-          <li>1. Chloecap SmPC</li>
-          <li>2. IMC Poster. 1216:5464; 54</li>
-          <li>3. Blood Journal. John H. et al. 454:448; 12</li>
-        </ul>
-      </div>
-      <div onclick="closeReference()" class="close_box">
-        <i class="close_btn fas fa-times fa-sm"></i>
+      <div class="modal_inf">
+        <div class="modal_content">
+          <h1>References</h1>
+          <ul>
+            <li>1. Chloecap SmPC</li>
+            <li>2. IMC Poster. 1216:5464; 54</li>
+            <li>3. Blood Journal. John H. et al. 454:448; 12</li>
+          </ul>
+        </div>
+        <div onclick="closeReference()" class="close_box">
+          <i class="close_btn fas fa-times fa-sm"></i>
+        </div>
       </div>
     </div>
     <!-- Modal box section Ends here -->
+    </div>
+    <!-- Main section Ends here -->
+
+   
     <footer id="footer">
-      <span class="footer_text">Ab, antibody </span>
+      <div class="footer_content"><span class="footer_text">Ab, antibody </span></div>
     </footer>
+    </div>
     <!-- main javascript file -->
     <script src="./js/script.js"></script>
 

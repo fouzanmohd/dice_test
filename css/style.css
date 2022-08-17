@@ -148,7 +148,7 @@ header {
 
 .main-container .second .slider .slide::-webkit-slider-thumb {
   -webkit-appearance: none;
-  background: url("images/playicon.png") center/contain no-repeat content-box;
+  background: url("../images/playicon.png") center/contain no-repeat content-box;
   height: 45px;
   width: 45px;
   margin-top: -20px;

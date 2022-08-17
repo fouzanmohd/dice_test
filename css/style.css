@@ -245,11 +245,11 @@ header {
 /* modal section starts here */
 .modal {
   position: fixed;
-  height: 80%;
+  height: 76%;
   width: 90%;
   background-color: #c1cdd3;
   left: 50%;
-  top: 50%;
+  top: 55%;
   transform: translate(-50%, -50%) scale(0);
   display: flex;
   justify-content: space-between;

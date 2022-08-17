@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- importing css file -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- importing font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css    "
+    />
+    <title>Dice Slider</title>
+  </head>
+  <body>
+    <!-- header section starts here -->
+    <header class="header">
+      <ul class="nav">
+        <li class="nav-item"><a class="border" href="">UNMET NEED</a></li>
+        <li class="nav-item"><a class="border" href="">TARGETED MoA</a></li>
+        <li class="nav-item">
+          <a class="selected_nav" href=""
+            >RAPID AND <br />
+            SUSTAINED EFFICACY</a
+          >
+        </li>
+      </ul>
+    </header>
+    <!-- header section ends here -->
+
+    <!-- Main section starts here -->
+
+    <div class="main">
+      <h1 class="title">
+        1. Improving patients’ ability to perform daily activities
+      </h1>
+
+      <div class="main-container">
+        <div class="container first">
+          <p>
+            Slide the arrow to select a number of activities you give your
+            patients
+          </p>
+          <img src="./images/Chloecap-Logo.png" alt="" />
+        </div>
+        <div class="container second">
+          <div class="activities">
+            <div class="activity 11"><span>≥10</span></div>
+            <div class="activity 9.9"><span>9</span></div>
+            <div class="activity 8.8"><span>8</span></div>
+            <div class="activity 7.7"><span>7</span></div>
+            <div class="activity 6.6"><span>6</span></div>
+            <div class="activity 5.5"><span>5</span></div>
+            <div class="activity 4.4"><span>4</span></div>
+            <div class="activity 3.3"><span>3</span></div>
+            <div class="activity 2.2"><span>2</span></div>
+            <div class="activity 1.1"><span>1</span></div>
+            <div class="activity selected_activity"><span>0</span></div>
+          </div>
+          <div class="slider">
+            <input
+              class="slide"
+              type="range"
+              min="0"
+              max="11"
+              value="0"
+              step="1.1"
+              oninput="activateSlider(this.value)"
+            />
+          </div>
+        </div>
+        <div class="container third">
+          <button class="reveal_btn" onclick="showData()">
+            Press to reveal
+          </button>
+        </div>
+      </div>
+      <div class="container sidebar">
+        <a class="home sidebar_item" href="#"
+          ><img class="sidebar_item" src="./images/Home-icon.png" alt=""
+        /></a>
+        <a class="reference sidebar_item" onclick="showReference(this)"
+          ><img src="./images/Reference-icon.png" alt=""
+        /></a>
+        <a
+          class="pi_icon sidebar_item"
+          href="https://www.medicines.org.uk/emc#gref"
+          ><img class="sidebar_item" src="./images/PI-icon.png" alt=""
+        /></a>
+      </div>
+      <div class="reveal_info" data-target="1.1">
+        <div class="circle">1</div>
+        <p class="reveal_info_content">one activity will be given to patient</p>
+      </div>
+
+      <div class="reveal_info" data-target="2.2">
+        <div class="circle">6</div>
+        <p class="reveal_info_content">
+          Met quia conseque earit, opta et lab inihitatet magnima gnation.
+        </p>
+      </div>
+
+      <div class="reveal_info" data-target="3.3">
+        <div class="circle">3</div>
+        <p class="reveal_info_content">
+          Three activities will be given to patient
+        </p>
+      </div>
+      <div class="reveal_info" data-target="4.4">
+        <div class="circle">4</div>
+        <p class="reveal_info_content">
+          four activities will be given to patient
+        </p>
+      </div>
+      <div class="reveal_info" data-target="5.5">
+        <div class="circle">5</div>
+        <p class="reveal_info_content">
+          five activities will be given to patient
+        </p>
+      </div>
+      <div class="reveal_info" data-target="6.6">
+        <div class="circle">6</div>
+        <p class="reveal_info_content">
+          six activities will be given to patient
+        </p>
+      </div>
+      <div class="reveal_info" data-target="7.7">
+        <div class="circle">7</div>
+        <p class="reveal_info_content">
+          seven activities will be given to patient
+        </p>
+      </div>
+      <div class="reveal_info" data-target="8.8">
+        <div class="circle">8</div>
+        <p class="reveal_info_content">
+          eight activities will be given to patient
+        </p>
+      </div>
+      <div class="reveal_info" data-target="9.9">
+        <div class="circle">9</div>
+        <p class="reveal_info_content">
+          nine activities will be given to patient
+        </p>
+      </div>
+      <div class="reveal_info" data-target="11">
+        <div class="circle">10</div>
+        <p class="reveal_info_content">
+          10 or more activities will be given to patient
+        </p>
+      </div>
+    </div>
+    <!-- Main section Ends here -->
+
+    <!-- Modal box section starts here -->
+    <div class="modal">
+      <div class="modal_content">
+        <h1>References</h1>
+        <ul>
+          <li>1. Chloecap SmPC</li>
+          <li>2. IMC Poster. 1216:5464; 54</li>
+          <li>3. Blood Journal. John H. et al. 454:448; 12</li>
+        </ul>
+      </div>
+      <div onclick="closeReference()" class="close_box">
+        <i class="close_btn fas fa-times fa-sm"></i>
+      </div>
+    </div>
+    <!-- Modal box section Ends here -->
+    <footer id="footer">
+      <span class="footer_text">Ab, antibody </span>
+    </footer>
+    <!-- main javascript file -->
+    <script src="./js/script.js"></script>
+
+    <!-- veeva library JS file -->
+    <script src="./js/veeva-library.js"></script>
+  </body>
+</html>
